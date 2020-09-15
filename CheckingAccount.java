@@ -119,4 +119,20 @@ public class CheckingAccount
     {
 
     }
+
+
+    /* DO NOT EDIT BELOW THIS LINE */
+
+    /**
+     * Simulate multiple months at once.
+     *
+     * @param n - the number of months to run.
+     */
+    public void runMultMonths(int n)
+    {
+        for(int i = 0; i < n; i++)
+        {
+            runMonth();
+        }
+    }
 }
