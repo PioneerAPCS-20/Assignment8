@@ -8,17 +8,20 @@ public class Runner
 {
     public static void main(String[] args)
     {
-        // create checkingAccount object with starting deposit of
+        // create CheckingAccount object with starting deposit of
         // $1000, 1.2% interest rate, and an account owner.
+        CheckingAccount acct1 = new CheckingAccount(1000.0, 0.012, "Mr. King");        
         
-        
-        // create checkingAccount object with an account owner (no initial deposit).
+        // create CheckingAccount object with an account owner (no initial deposit).
         
         
         // print account info for both accounts
+        acct1.printInfo();
+        acct2.printInfo();
 
         
         // make one month pass for both accounts
+        acct1.runMonth();
 
         
         // print account info for both accounts

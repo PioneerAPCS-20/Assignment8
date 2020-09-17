@@ -10,17 +10,24 @@
 public class CheckingAccount
 {
     // Private instance variables
-
-
+    private int acctAge;  // in months
+    private double rate;  // as a decimal
+    private int compounds;  // per year
+    private String owner;
+    private double balance;
 
 
     /**
-     * Create account with starting balance a, interest rate r, owner own
+     * Create account with starting balance bal, interest rate r, owner own
      * Remember to initialize all class variables.
      */
     public CheckingAccount(double bal, double r, String own)
     {
-        
+        balance = bal;
+        rate = r;
+        owner = own;
+        compounds = 12;
+        acctAge = 0;
     }
     
     /**
@@ -39,7 +46,7 @@ public class CheckingAccount
      */
     public double getBalance()
     {
-
+        return balance;
     }
     
     /**
@@ -104,7 +111,7 @@ public class CheckingAccount
     public void runMonth()
     { 
         /* Interest is added to balance and acctAge is incremented by one
-         * A = P * (1 + (rate / 12))
+         * A = P * (1 + (rate / compounds))
          * P is current ammount in the account
          * A is new amount after interest is added */
         
@@ -117,7 +124,10 @@ public class CheckingAccount
      */
     public void printInfo()
     {
+        // Fill in rest of the info
 
+        double b = Math.round(balance * 100) / 100.0;
+        System.out.println("Balance: $" + b);
     }
 
 
